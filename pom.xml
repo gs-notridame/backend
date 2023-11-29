@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.system</groupId>
-	<artifactId>harmonia</artifactId>
+	<artifactId>psycheck</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>harmonia</name>
-	<description>HarmonIa, plataforma de soluções mentais para pessoas que precisam de auxílio psicológico</description>
+	<description>PsyCheck, plataforma de soluções mentais para pessoas que precisam de auxílio psicológico</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

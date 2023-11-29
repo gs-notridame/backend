@@ -1,13 +1,13 @@
-package com.system.harmonia;
+package com.system.psycheck;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HarmoniaApplication {
+public class PsyCheckApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HarmoniaApplication.class, args);
+		SpringApplication.run(PsyCheckApplication.class, args);
 	}
 
 }
