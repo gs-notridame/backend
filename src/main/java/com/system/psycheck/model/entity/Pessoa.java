@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Table(name = "PESSOA")
 @Entity(name = "PESSOA")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "TIPO")
 public class Pessoa {
 
     @Id
@@ -19,25 +18,33 @@ public class Pessoa {
     private String usuario;
     private String senha;
 
+    private String tipo;
 
     public Pessoa() {
     }
 
-    public Pessoa(Long codPessoa, String nome, String email, Boolean softDelete, String usuario, String senha) {
+    public Pessoa(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public Pessoa(Long codPessoa, String nome, String email, Boolean softDelete, String usuario, String senha, String tipo) {
         this.codPessoa = codPessoa;
         this.nome = nome;
         this.email = email;
         this.softDelete = softDelete;
         this.usuario = usuario;
         this.senha = senha;
+        this.tipo = tipo;
     }
 
-    public Pessoa(String nome, String email, Boolean softDelete, String usuario, String senha) {
+    public Pessoa( String nome, String email, Boolean softDelete, String usuario, String senha, String tipo) {
+
         this.nome = nome;
         this.email = email;
         this.softDelete = softDelete;
         this.usuario = usuario;
         this.senha = senha;
+        this.tipo = tipo;
     }
 
     public Long getCodPessoa() {

@@ -1,34 +1,32 @@
 package com.system.psycheck.model.entity;
 
-import com.system.psycheck.model.dto.DadosCadastroPaciente;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-
+@Entity
 @Table(name = "PESSOA_FISICA")
-@Entity(name = "PESSOA_FISICA")
-@DiscriminatorValue("PF")
 public class PessoaFisica extends Pessoa {
     private LocalDate dataNasc;
     private String cpf;
 
-    @OneToOne
-    @JoinColumn(name = "COD_GENERO")
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "GENERO", referencedColumnName = "COD_GENERO", foreignKey = @ForeignKey(name = "FK_PF_GENERO"))
     private Genero genero;
 
     public PessoaFisica() {
+        super("PF");
     }
 
     public PessoaFisica(Long codPessoa, String nome, String email, Boolean softDelete, String usuario, String senha, LocalDate dataNasc, String cpf, Genero genero) {
-        super(codPessoa, nome, email, softDelete, usuario, senha);
+        super(codPessoa, nome, email, softDelete, usuario, senha, "PF");
         this.dataNasc = dataNasc;
         this.cpf = cpf;
         this.genero = genero;
     }
 
     public PessoaFisica(String nome, String email, Boolean softDelete, String usuario, String senha, LocalDate dataNasc, String cpf, Genero genero) {
-        super(nome, email, softDelete, usuario, senha);
+        super(nome, email, softDelete, usuario, senha, "PF");
         this.dataNasc = dataNasc;
         this.cpf = cpf;
         this.genero = genero;

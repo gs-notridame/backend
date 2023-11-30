@@ -16,9 +16,9 @@ public class Paciente {
     private String historico;
     private String numSeguroSaude;
 
-    @OneToOne
-    @JoinColumn(name = "COD_PESSOA")
-    private PessoaFisica pessoaFisica;
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "PESSOA",referencedColumnName = "COD_PESSOA", foreignKey = @ForeignKey(name = "fk_paciente_pessoa"))
+    private PessoaFisica pessoa;
 
     public Paciente() {
     }
@@ -27,23 +27,13 @@ public class Paciente {
         this.codPaciente = codPaciente;
         this.historico = historico;
         this.numSeguroSaude = numSeguroSaude;
-        this.pessoaFisica = pessoaFisica;
+        this.pessoa = pessoaFisica;
     }
 
     public Paciente(DadosCadastroPaciente dados) {
         this.historico = dados.historico();
         this.numSeguroSaude = dados.numSeguroSaude();
-
-        this.pessoaFisica = new PessoaFisica(
-                dados.nome(),
-                dados.email(),
-                dados.softDelete(),
-                dados.usuario(),
-                dados.senha(),
-                dados.dataNasc(),
-                dados.cpf(),
-                dados.genero()
-        );
+        this.pessoa = dados.pessoa();
     }
 
     public Long getCodPaciente() {
@@ -73,12 +63,12 @@ public class Paciente {
         return this;
     }
 
-    public PessoaFisica getPessoaFisica() {
-        return pessoaFisica;
+    public PessoaFisica getPessoa() {
+        return pessoa;
     }
 
-    public Paciente setPessoaFisica(PessoaFisica pessoaFisica) {
-        this.pessoaFisica = pessoaFisica;
+    public Paciente setPessoa(PessoaFisica pessoaFisica) {
+        this.pessoa = pessoaFisica;
         return this;
     }
 
@@ -90,33 +80,33 @@ public class Paciente {
             this.numSeguroSaude = dados.numSeguroSaude();
         }
         if (dados.nome() != null) {
-            this.pessoaFisica.setNome(dados.nome());
+            this.pessoa.setNome(dados.nome());
         }
         if (dados.email() != null) {
-            this.pessoaFisica.setEmail(dados.email());
+            this.pessoa.setEmail(dados.email());
         }
         if (dados.softDelete() != null) {
-            this.pessoaFisica.setSoftDelete(dados.softDelete());
+            this.pessoa.setSoftDelete(dados.softDelete());
         }
         if (dados.usuario() != null) {
-            this.pessoaFisica.setUsuario(dados.usuario());
+            this.pessoa.setUsuario(dados.usuario());
         }
         if (dados.senha() != null) {
-            this.pessoaFisica.setSenha(dados.senha());
+            this.pessoa.setSenha(dados.senha());
         }
         if (dados.genero() != null) {
-            this.pessoaFisica.setGenero(dados.genero());
+            this.pessoa.setGenero(dados.genero());
         }
         if (dados.dataNasc() != null) {
-            this.pessoaFisica.setDataNasc(dados.dataNasc());
+            this.pessoa.setDataNasc(dados.dataNasc());
         }
         if (dados.cpf() != null) {
-            this.pessoaFisica.setCpf(dados.cpf());
+            this.pessoa.setCpf(dados.cpf());
         }
     }
 
 
     public void excluir() {
-        this.pessoaFisica.setSoftDelete(true);
+        this.pessoa.setSoftDelete(true);
     }
 }

@@ -2,10 +2,9 @@ package com.system.psycheck.controller;
 
 import com.system.psycheck.model.dto.DadosAtualizacaoPaciente;
 import com.system.psycheck.model.dto.DadosCadastroPaciente;
-import com.system.psycheck.model.dto.DadosRecebeNomePaciente;
+import com.system.psycheck.model.dto.DadosListagemPessoas;
 import com.system.psycheck.model.entity.Genero;
 import com.system.psycheck.model.entity.Paciente;
-import com.system.psycheck.model.entity.Pessoa;
 import com.system.psycheck.model.entity.PessoaFisica;
 import com.system.psycheck.model.repository.GeneroRepository;
 import com.system.psycheck.model.repository.PacienteRepository;
@@ -39,22 +38,19 @@ public class PacienteController {
     @Transactional
     public void cadastrar(@RequestBody @Valid DadosCadastroPaciente dados) {
         Paciente paciente = new Paciente(dados);
-        Genero genero = new Genero(dados.genero());
-        PessoaFisica pessoaFisica = paciente.getPessoaFisica();
-        generoRepository.save(genero);
-        pessoaFisicaRepository.save(pessoaFisica);
-        pacienteRepository.save(paciente);
-
-//        PessoaFisica pessoaFisica = new PessoaFisica(dados.nome(), dados.email(), dados.softDelete(), dados.usuario(), dados.senha(), dados.dataNasc(), dados.cpf(), genero);
-//        pessoaFisicaRepository.save(pessoaFisica);
-
+        pacienteRepository.save (paciente);
+        System.out.println(paciente);
     }
 
-//    @GetMapping("/{id}")
-//    public Page listarNome(@PageableDefault(size=3,
-//            sort= {"ator"}) Pageable paginacao) {
-//        return pacienteRepository.findPacienteById(paginacao).map(DadosRecebeNomePaciente :: new);
-//    }
+    @GetMapping("/pessoas")
+    public Page<DadosListagemPessoas> listar(@PageableDefault() Pageable paginacao) {
+        return pessoaRepository.findAll(paginacao).map(DadosListagemPessoas :: new);
+    }
+
+    @GetMapping("/{id}")
+    public Page<DadosListagemPessoas> DadosPaciente(@PageableDefault() Pageable paginacao) {
+        return pessoaRepository.findAll(paginacao).map(DadosListagemPessoas :: new);
+    }
 
     @PutMapping
     @Transactional
