@@ -30,72 +30,79 @@ A equipe do Syncfy é composta por experientes no desenvolvimento de soluções 
 
 # Estudo de caso
 
-### Como o Syncfy Revolucionou o Processo de Aquisição de Produtos para Empresas
+### Projeto PsyCheck: Transformando a Saúde Mental
 
 ## Introdução
 
-Uma solução B2B inovadora para solicitações de cotações de compra de produtos, transformou a maneira como as empresas adquirem produtos e serviços. A Syncfy se destaca por sua busca incessante pela precisão e eficiência, visando alcançar uma taxa de 100% de matching entre as solicitações das empresas e as cotações fornecidas pelos fornecedores.
+O aumento das taxas de estresse, ansiedade e depressão representa um desafio significativo na área de saúde mental. O acesso limitado a recursos adequados agrava esse problema, resultando em uma necessidade premente de soluções inovadoras. O projeto PsyCheck surge como uma resposta a esses desafios, propondo uma abordagem revolucionária para melhorar a qualidade dos cuidados de saúde mental.
 
-## O Desafio
+## O Desafio na Saúde Mental
 
-Antes de adotar o Syncfy, as empresas enfrentavam diversos desafios ao adquirir produtos, incluindo:
+Antes da implementação do PsyCheck, as dificuldades na saúde mental incluíam a falta de detecção precoce, a escassez de recursos acessíveis e a limitada colaboração entre usuários e profissionais de saúde. Isso levava a diagnósticos tardios, tratamentos inadequados e uma lacuna na prestação de cuidados eficazes.
 
-1. Ineficiência no processo de solicitação de cotações.
-2. Erros de comunicação que levavam a cotações imprecisas.
-3. Falta de transparência e rastreabilidade nas solicitações de cotação.
-4. Tempo gasto excessivo na correspondência manual com fornecedores.
+## A Solução PsyCheck
 
-Esses desafios resultaram em atrasos, custos excessivos e insatisfação entre as empresas que buscavam otimizar suas operações de aquisição.
+O PsyCheck introduziu o aplicativo que utiliza tecnologias modernas para enfrentar esses desafios de frente:
 
-## A Solução
+### Detecção Precoce:
+O aplicativo incorpora inteligência artificial para identificar padrões de comportamento que podem indicar problemas de saúde mental, permitindo uma intervenção precoce e eficaz.
 
-A Syncfy introduziu uma plataforma B2B revolucionária que abordou esses desafios de frente. Sua abordagem envolveu:
+### Automação de Suporte:
+Chatbots integrados oferecem suporte contínuo, fornecendo informações úteis, estratégias de enfrentamento e incentivando a busca por ajuda profissional quando necessário.
 
-1. **Solicitações Precisas**: A plataforma permitiu que as empresas especificassem detalhes precisos de suas necessidades, eliminando mal-entendidos e erros nas solicitações.
+### Análise de Dados para Personalização:
+A análise de dados personaliza a experiência do usuário, adaptando o suporte de acordo com as necessidades individuais, aumentando a eficácia das intervenções.
 
-2. **Match 100%**: A Syncfy desenvolveu algoritmos sofisticados que garantem que as cotações fornecidas pelos fornecedores atendam exatamente às especificações das empresas.
+### Acessibilidade Aprimorada:
+Uma interface intuitiva e amigável torna o PsyCheck acessível a todos, eliminando barreiras para aqueles que podem hesitar em procurar ajuda.
 
-3. **Comunicação Eficiente**: A plataforma automatizou a comunicação entre as empresas e os fornecedores, garantindo que todas as informações relevantes fossem compartilhadas de maneira eficiente e segura.
+### Colaboração com Profissionais de Saúde:
+O aplicativo facilita a comunicação entre usuários e profissionais de saúde, promovendo uma abordagem colaborativa para o tratamento e monitoramento da saúde mental.
 
-## Resultados
 
-A implementação do Syncfy terá um impacto notável nas empresas que adotaram a plataforma:
+## Resultados Esperados
 
-1. **Eficiência Aprimorada**: O tempo gasto no processo de aquisição foi reduzido significativamente, permitindo que as empresas alocassem recursos para outras áreas críticas de negócios.
+A implementação do PsyCheck promete resultados positivos para a saúde mental individual e a sociedade como um todo:
 
-2. **Redução de Erros**: A taxa de erro nas cotações foi virtualmente eliminada, economizando tempo e recursos anteriormente desperdiçados na correção de discrepâncias.
+### Melhoria da Saúde Mental:
+Ao abordar precocemente os problemas de saúde mental e oferecer suporte contínuo, o PsyCheck visa melhorar o bem-estar emocional dos usuários.
 
-3. **Satisfação do Cliente**: As empresas puderam atender às necessidades de seus clientes de forma mais eficaz devido à capacidade de obter cotações precisas e prontas.
+### Prevenção Eficiente:
+A detecção precoce e as intervenções personalizadas contribuem para a prevenção eficaz de condições de saúde mental mais graves.
 
-4. **Economia de Custos**: A redução de erros e a eficiência aprimorada resultaram em economias significativas de custos de aquisição.
+### Acessibilidade aos Cuidados de Saúde Mental:
+A interface amigável e a automação de suporte tornam os cuidados de saúde mental mais acessíveis a uma variedade de usuários.
+
+### Colaboração Significativa:
+Facilitando a colaboração entre usuários e profissionais de saúde, o PsyCheck promove um tratamento mais eficaz e personalizado.
 
 ## Conclusão
 
-O projeto Syncfy ilustra como a inovação tecnológica pode simplificar processos de aquisição complexos. Ao focar na precisão e na eficiência, a plataforma ajudou as empresas a otimizar suas operações de aquisição, economizando tempo e recursos valiosos. A busca por um matching de 100% nas cotações demonstra o compromisso contínuo da Syncfy em atender às necessidades de seus clientes e melhorar constantemente a eficiência dos processos de aquisição.
+O Projeto PsyCheck ilustra como a inovação tecnológica pode transformar a abordagem aos desafios de saúde mental. Ao integrar inteligência artificial, chatbots e análise de dados, o aplicativo oferece uma solução abrangente que não apenas aborda os sintomas, mas também trabalha na prevenção e colaboração. O potencial impacto positivo na sociedade destaca a importância de soluções criativas e tecnologicamente avançadas na melhoria da saúde mental.
 
 <a id="_fluxograma_"></a>
 
 # Fluxograma da Arquitetura do Sistema
 
-<img src="./documentacao/Enterprise%20Application%20Development/FluxogramaArquiteturaDoSistema.png" title="Fluxograma da Arquitetura do Sistema">
+<img src="documentacao/Devops/fluxograma_arquitetura_sistema.png" title="Fluxograma da Arquitetura do Sistema">
 
 <a id="_der_"></a>
 
 # Diagrama de Entidades e Relacionamentos
 
-<img src="./documentacao/Enterprise%20Application%20Development/MLSyncfy.jpeg" title="Fluxograma da Arquitetura do Sistema">
+<img src="documentacao/database/datamodeler/modelo_logico.jpeg" title="Fluxograma da Arquitetura do Sistema">
 
 <a id="_mer_"></a>
 
 # Modelo de Entidades e Relacionamentos
 
-<img src="./documentacao/Enterprise%20Application%20Development/MR_Syncfy.jpeg" title="Fluxograma da Arquitetura do Sistema">
+<img src="documentacao/database/datamodeler/modelo_realcional.jpeg" title="Fluxograma da Arquitetura do Sistema">
 
 <a id="_Diagrama_de_Classes"></a>
 
 # Diagrama de Classes
 
-<img src="./documentacao/Enterprise%20Application%20Development/Diagrama_de_Classes.png" title="Diagrama de Classes">
+<img src="documentacao/diagrama/diagrama_classes.png" title="Diagrama de Classes">
 
 <a id="_Rodar_Aplicacao"></a>
 
