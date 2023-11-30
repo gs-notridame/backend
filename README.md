@@ -1,8 +1,8 @@
-# Syncfy - Plataforma de Solicitação e Cotações
+# PsyCheck - Plataforma de Auxilio para Saúde Mental
 
 ## Apresentação da Equipe
 
-A equipe do Syncfy é composta por experientes no desenvolvimento de soluções B2B. Nossos membros incluem:
+A equipe do PsyCheck é composta por experientes no desenvolvimento de soluções B2C. Nossos membros incluem:
 
 - Matheus Ramos de Pierro - Arquiteto de Soluções, DBA e Dev Backend - https://github.com/matheusPierro/
 - Felipe de Lima Santiago - Scrum Master - https://github.com/fehstack
