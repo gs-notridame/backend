@@ -2,6 +2,7 @@ package com.system.psycheck.model.entity;
 
 import com.system.psycheck.model.dto.DadosAtualizacaoPaciente;
 import com.system.psycheck.model.dto.DadosCadastroPaciente;
+import com.system.psycheck.model.dto.DadosPaciente;
 import jakarta.persistence.*;
 
 @Table(name = "PACIENTE")
@@ -23,14 +24,14 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(Long codPaciente, String historico, String numSeguroSaude, PessoaFisica pessoaFisica) {
-        this.codPaciente = codPaciente;
-        this.historico = historico;
-        this.numSeguroSaude = numSeguroSaude;
-        this.pessoa = pessoaFisica;
+    public Paciente(DadosCadastroPaciente dados) {
+        this.historico = dados.historico();
+        this.numSeguroSaude = dados.numSeguroSaude();
+        this.pessoa = dados.pessoa();
     }
 
-    public Paciente(DadosCadastroPaciente dados) {
+    public Paciente(DadosPaciente dados){
+        this.codPaciente = dados.codPaciente();
         this.historico = dados.historico();
         this.numSeguroSaude = dados.numSeguroSaude();
         this.pessoa = dados.pessoa();

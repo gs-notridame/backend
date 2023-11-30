@@ -1,22 +1,26 @@
 package com.system.psycheck.model.dto;
 
 import com.system.psycheck.model.entity.Paciente;
+import com.system.psycheck.model.entity.PessoaFisica;
 import jakarta.validation.constraints.NotBlank;
 
-public record DadosRecebeNomePaciente (
+public record DadosPaciente(
     @NotBlank
     Long codPaciente,
     @NotBlank
     String historico,
     @NotBlank
-    String numSeguroSaude
+    String numSeguroSaude,
+
+    PessoaFisica pessoa
 
 ){
-    public DadosRecebeNomePaciente (Paciente paciente){
+    public DadosPaciente(Paciente paciente){
         this(
                 paciente.getCodPaciente(),
                 paciente.getHistorico(),
-                paciente.getNumSeguroSaude()
+                paciente.getNumSeguroSaude(),
+                paciente.getPessoa()
 
         );
     }

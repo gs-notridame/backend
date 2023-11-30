@@ -1,13 +1,10 @@
 package com.system.psycheck.model.entity;
 
 
-import com.system.psycheck.model.dto.DadosCadastroPaciente;
-import com.system.psycheck.model.dto.DadosGenero;
 import jakarta.persistence.*;
 
-
-@Table(name = "GENERO")
 @Entity
+@Table(name = "GENERO")
 public class Genero {
 
     @Id
@@ -24,10 +21,6 @@ public class Genero {
     public Genero(Long codGenero, String genero) {
         this.codGenero = codGenero;
         this.genero = genero;
-    }
-
-    public Genero (DadosGenero dados){
-        this.genero = dados.genero();
     }
 
     public Long getCodGenero() {
@@ -48,3 +41,4 @@ public class Genero {
         return this;
     }
 }
+
