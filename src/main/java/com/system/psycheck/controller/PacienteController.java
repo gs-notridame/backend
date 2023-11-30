@@ -4,12 +4,8 @@ import com.system.psycheck.model.dto.DadosAtualizacaoPaciente;
 import com.system.psycheck.model.dto.DadosCadastroPaciente;
 import com.system.psycheck.model.dto.DadosListagemPessoas;
 import com.system.psycheck.model.dto.DadosPaciente;
-import com.system.psycheck.model.entity.Genero;
 import com.system.psycheck.model.entity.Paciente;
-import com.system.psycheck.model.entity.PessoaFisica;
-import com.system.psycheck.model.repository.GeneroRepository;
 import com.system.psycheck.model.repository.PacienteRepository;
-import com.system.psycheck.model.repository.PessoaFisicaRepository;
 import com.system.psycheck.model.repository.PessoaRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +53,6 @@ public class PacienteController {
             return ResponseEntity.notFound().build();
         }
     }
-
 
     @PutMapping
     @Transactional

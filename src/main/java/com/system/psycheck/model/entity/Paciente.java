@@ -18,7 +18,7 @@ public class Paciente {
     private String numSeguroSaude;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "PESSOA",referencedColumnName = "COD_PESSOA", foreignKey = @ForeignKey(name = "fk_paciente_pessoa"))
+    @JoinColumn(name = "PESSOA", referencedColumnName = "COD_PESSOA", foreignKey = @ForeignKey(name = "fk_paciente_pessoa"))
     private PessoaFisica pessoa;
 
     public Paciente() {
@@ -30,7 +30,7 @@ public class Paciente {
         this.pessoa = dados.pessoa();
     }
 
-    public Paciente(DadosPaciente dados){
+    public Paciente(DadosPaciente dados) {
         this.codPaciente = dados.codPaciente();
         this.historico = dados.historico();
         this.numSeguroSaude = dados.numSeguroSaude();
@@ -74,38 +74,11 @@ public class Paciente {
     }
 
     public void atualizar(DadosAtualizacaoPaciente dados) {
-        if (dados.historico() != null) {
-            this.historico = dados.historico();
-        }
-        if (dados.numSeguroSaude() != null) {
-            this.numSeguroSaude = dados.numSeguroSaude();
-        }
-        if (dados.nome() != null) {
-            this.pessoa.setNome(dados.nome());
-        }
-        if (dados.email() != null) {
-            this.pessoa.setEmail(dados.email());
-        }
-        if (dados.softDelete() != null) {
-            this.pessoa.setSoftDelete(dados.softDelete());
-        }
-        if (dados.usuario() != null) {
-            this.pessoa.setUsuario(dados.usuario());
-        }
-        if (dados.senha() != null) {
-            this.pessoa.setSenha(dados.senha());
-        }
-        if (dados.genero() != null) {
-            this.pessoa.setGenero(dados.genero());
-        }
-        if (dados.dataNasc() != null) {
-            this.pessoa.setDataNasc(dados.dataNasc());
-        }
-        if (dados.cpf() != null) {
-            this.pessoa.setCpf(dados.cpf());
-        }
+        this.codPaciente = dados.codPaciente();
+        this.historico = dados.historico();
+        this.numSeguroSaude = dados.numSeguroSaude();
+        this.pessoa = dados.pessoa();
     }
-
 
     public void excluir() {
         this.pessoa.setSoftDelete(true);
